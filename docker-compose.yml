@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8084:80"
+    volumes:
+      - ./laravel_app:/var/www/html
+    container_name: ol9-php-nginx
