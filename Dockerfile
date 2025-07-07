@@ -8,8 +8,8 @@ RUN dnf -y update &&\
     dnf -y install oraclelinux-developer-release-el9 epel-release &&\
     dnf -y install oracle-instantclient-release-el9 &&\
     dnf -y install oracle-instantclient${release}.${update}-basic oracle-instantclient${release}.${update}-devel oracle-instantclient${release}.${update}-sqlplus &&\
-    dnf -y install nginx nodejs npm nano unzip &&\
     dnf module enable -y php:8.3 && dnf module enable -y nodejs:22 &&\
+    dnf -y install nginx nodejs npm nano unzip &&\
     dnf -y install php-cli php-fpm php-common php-mbstring php-xml php-bcmath php-intl php-zip php-pdo php-pear php-xml php-devel php-sqlite3 php-mysqlnd php-pgsql php-opcache php-xdebug php-curl php-bz2 &&\
     dnf clean all &&\
     rm -rf /var/cache/dnf
